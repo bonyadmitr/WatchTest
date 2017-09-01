@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
@@ -79,8 +83,8 @@
                         </dateLabel>
                         <timer alignment="left" id="yHy-pM-4iS"/>
                         <map height="100" alignment="left" id="t3U-Zl-cM8"/>
-                        <movie width="1" height="100" alignment="left" id="sDF-Oz-M0I"/>
-                        <inlineMovie width="1" height="100" alignment="left" id="aKa-Mx-7go"/>
+                        <movie width="1" height="100" alignment="left" posterImage="Activity1" id="sDF-Oz-M0I"/>
+                        <inlineMovie width="1" height="100" alignment="left" loops="YES" posterImage="Activity1" id="aKa-Mx-7go"/>
                     </items>
                     <connections>
                         <outlet property="button" destination="HPp-UW-IRn" id="Kme-Va-zBy"/>

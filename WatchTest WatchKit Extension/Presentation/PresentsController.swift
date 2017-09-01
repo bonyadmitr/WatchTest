@@ -79,8 +79,8 @@ class PresentsController: WKInterfaceController {
         let options: [String: Any] = [
             WKMediaPlayerControllerOptionsAutoplayKey: false, /// default true
             //WKMediaPlayerControllerOptionsStartTimeKey: 1,
-            //WKMediaPlayerControllerOptionsVideoGravityKey: true, /// video resizing to fit
-//            WKMediaPlayerControllerOptionsLoopsKey: true
+            //WKMediaPlayerControllerOptionsVideoGravityKey: WKVideoGravity.resizeAspect, /// video resizing to fit
+            //WKMediaPlayerControllerOptionsLoopsKey: true
         ]
         
         presentMediaPlayerController(with: url, options: options) { (didPlayToEnd, timePlayed, error) in
@@ -119,10 +119,11 @@ class PresentsController: WKInterfaceController {
     @IBAction func actionTextInput() {
         /// results is nil if cancelled
         presentTextInputController(withSuggestions: ["1", "2", "qwe"], allowedInputMode: .allowAnimatedEmoji) { (resultArray) in
-            guard let result = resultArray else {
-                return print("nil, cancled")
+            guard let result = resultArray, let text = result.first else {
+                return print("nil, canceled")
             }
-            print("result", result)
+            print("result array", result)
+            print("first", text)
         }
     }
     

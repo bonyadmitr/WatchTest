@@ -8,13 +8,21 @@
 
 import WatchKit
 
-/// Global tint effect to:
+/// Global tint effects to:
 /// - back button title of push controllers (not modal)
 /// - start controller title
 /// - side by side default button style
 /// - buttons colors in the TextInputController
+/// - app name text color on notification launch (when it is displayed in the short look notification panel)
 
 /// Notifications can only use the system font
+/// To use custom fonts, you must install the fonts into both the Watch app bundle and the WatchKit extension bundle
+/// - and add the UIAppFonts key to your Watch app’s Info.plist file
+/// - for full info check Using Custom Fonts section in
+/// - https://developer.apple.com/library/content/documentation/General/Conceptual/WatchKitProgrammingGuide/TextandLabels.html
+/// - Avoid missing glyphs for custom fonts
+
+/// watchOS stops gathering heart rate data when you begin playing media files or recording audio
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 

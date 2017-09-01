@@ -83,6 +83,7 @@ class TestController: WKInterfaceController {
         group.setCornerRadius(10)
         
         pickerSetup()
+        setupMovies()
     }
     
     private func pickerSetup() {
@@ -96,6 +97,12 @@ class TestController: WKInterfaceController {
         let items = [item1, item2]
         picker.setItems(items)
         picker.setSelectedItemIndex(1)
+    }
+    
+    private func setupMovies() {
+        guard let url = URL(string: "http://clips.vorwaerts-gmbh.de/VfE_html5.mp4") else { return }
+        movie.setMovieURL(url)
+//        inlineMovie.setMovieURL(url)
     }
     
     override func willActivate() {
