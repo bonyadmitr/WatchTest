@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                        <separator alignment="left" id="27D-5D-Mzf">
+                            <color key="color" red="1" green="0.236459843" blue="0.077610930580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </separator>
+                        <label alignment="left" text="Label" id="wa3-9E-PPi"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" descriptionFormat="Description tets" id="JfB-70-Muf">
+                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sashColor" red="0.0" green="1" blue="0.001282171306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </notificationCategory>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="tm7-DU-U88"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="E4E-kU-vUq"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="1015"/>
+        </scene>
+        <!--be-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller backgroundImage="be" spacing="8" id="4sK-HA-Art" customClass="NotificationController" customModule="WatchTest_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <imageView alignment="left" image="us" animationDuration="2" id="VKd-EM-Mf2"/>
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" radius="9" spacing="5" id="VDT-sc-3Ac">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="Label" minimumScaleFactor="0.5" id="YLR-8L-XRZ">
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                                <label alignment="right" verticalAlignment="center" text="Label" minimumScaleFactor="0.10000000000000001" id="ia1-OW-rby">
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                </label>
+                            </items>
+                            <color key="backgroundColor" red="0.0" green="1" blue="0.001282171306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <edgeInsets key="margins" left="5" right="5" top="0.0" bottom="0.0"/>
+                        </group>
+                    </items>
+                    <edgeInsets key="margins" left="4" right="4" top="4" bottom="4"/>
+                    <connections>
+                        <outlet property="bodyLabel" destination="ia1-OW-rby" id="Ind-X9-83e"/>
+                        <outlet property="titleLabel" destination="YLR-8L-XRZ" id="dUE-BG-81a"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="1015"/>
+        </scene>
+    </scenes>
+</document>

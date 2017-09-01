@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--InterfaceController-->
+        <scene sceneID="epa-qa-XSl">
+            <objects>
+                <controller identifier="InterfaceController" id="7sP-q8-uwm" customClass="InterfaceController" customModule="WatchTest_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="r8I-WB-Yfr">
+                            <items>
+                                <tableRow identifier="CountryRow" id="ZAJ-Ov-iwS" customClass="CountryRow" customModule="WatchTest_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="GLP-2F-F8c">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="country name" id="OBF-fp-QpO">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="OBF-fp-QpO" id="6TF-In-rxk"/>
+                                        <segue destination="202-Nw-Nkd" kind="push" identifier="details" id="CfZ-or-mcx"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="r8I-WB-Yfr" id="3Mg-a7-Der"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="619" y="392"/>
+        </scene>
+        <!--DetailInterfaceController-->
+        <scene sceneID="Nyk-fb-WA4">
+            <objects>
+                <controller identifier="DetailInterfaceController" animationDuration="2" alwaysBounce="YES" id="202-Nw-Nkd" customClass="DetailInterfaceController" customModule="WatchTest_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="country name" id="2j9-aA-YuI"/>
+                        <imageView width="0.80000000000000004" height="60" alignment="center" image="us" id="hIh-Nm-9fd"/>
+                        <group alignment="center" verticalAlignment="center" layout="vertical" id="4Sw-Nx-IF0">
+                            <items>
+                                <label alignment="center" text="Capital" id="t7D-0j-7EL"/>
+                                <label alignment="center" text="capital" minimumScaleFactor="0.5" id="TEy-EF-mku"/>
+                            </items>
+                        </group>
+                        <group alignment="center" verticalAlignment="bottom" spacing="5" id="sz1-fT-Zqv">
+                            <items>
+                                <label alignment="left" verticalAlignment="center" text="Curency" id="1x5-b7-1gB">
+                                    <fontDescription key="font" type="system" weight="light" pointSize="10"/>
+                                </label>
+                                <label alignment="left" verticalAlignment="center" text="USD" id="F89-ZV-hAP"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="capital" destination="TEy-EF-mku" id="oWU-wu-Bkj"/>
+                        <outlet property="countryName" destination="2j9-aA-YuI" id="Y0S-am-olH"/>
+                        <outlet property="currency" destination="F89-ZV-hAP" id="Ley-fe-fNu"/>
+                        <outlet property="flag" destination="hIh-Nm-9fd" id="pGX-Je-9SN"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="867" y="393"/>
+        </scene>
+    </scenes>
+</document>

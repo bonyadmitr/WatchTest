@@ -1,0 +1,12 @@
+{
+  "supported complication families" : {
+    "7" : "9663105A-B54C-4FE5-9315-231E4DA755F4.json",
+    "3" : "8BD109D9-99AC-4CFB-933D-A1E9ECE1869F.json",
+    "4" : "BE4C1666-0C99-42E9-B884-100394FC2BE5.json",
+    "0" : "FD5A38B3-DBC7-4CEB-B9F4-1D88CE4806FB.json",
+    "1" : "2F018106-DAB2-464B-BEE1-EE1BFB1D644C.json",
+    "6" : "9336F9A8-E6C9-4288-BC08-1CB42A9738AA.json",
+    "2" : "46A661AB-BAA5-4698-8ECF-762F786F8A5F.json"
+  },
+  "client ID" : "com.vironit.WatchTest.watchkitapp.watchkitextension"
+}

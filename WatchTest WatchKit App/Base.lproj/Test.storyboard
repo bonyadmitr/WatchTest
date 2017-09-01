@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--TestController-->
+        <scene sceneID="2Oy-d1-hll">
+            <objects>
+                <controller identifier="TestController" id="wiZ-ZG-ou0" customClass="TestController" customModule="WatchTest_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Button" id="HPp-UW-IRn">
+                            <connections>
+                                <action selector="actionButton" destination="wiZ-ZG-ou0" id="wzn-Zx-YEl"/>
+                            </connections>
+                        </button>
+                        <separator alignment="left" id="fea-CL-X9w"/>
+                        <paymentButton width="1" alignment="left" id="h5H-rT-uHO">
+                            <connections>
+                                <action selector="actionPaymentButton" destination="wiZ-ZG-ou0" id="CWz-Z7-1vI"/>
+                            </connections>
+                        </paymentButton>
+                        <switch width="1" alignment="left" value="YES" title="Switch" id="PNY-g4-rtG">
+                            <connections>
+                                <action selector="actionSomeSwitch:" destination="wiZ-ZG-ou0" id="GbU-id-5qS"/>
+                            </connections>
+                        </switch>
+                        <slider width="1" alignment="left" value="1" maximum="3" steps="3" id="yKX-LG-qr7">
+                            <connections>
+                                <action selector="actionSlider:" destination="wiZ-ZG-ou0" id="ytk-Pf-O0Q"/>
+                            </connections>
+                        </slider>
+                        <imageView alignment="left" id="wRb-eE-gXy"/>
+                        <picker height="100" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="rjn-zI-2W0">
+                            <connections>
+                                <action selector="actionPicker:" destination="wiZ-ZG-ou0" id="C62-Z2-t4j"/>
+                            </connections>
+                        </picker>
+                        <group width="1" alignment="left" id="ST5-gw-sKs">
+                            <items>
+                                <label alignment="center" text="Label" id="TaC-K4-beC">
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="u1g-oY-VxI">
+                                            <connections>
+                                                <action selector="actionTapGesture:" destination="wiZ-ZG-ou0" id="yrJ-0g-gMJ"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                        <longPressGestureRecognizer id="BEA-ob-hta">
+                                            <connections>
+                                                <action selector="actionLongPressGesture:" destination="wiZ-ZG-ou0" id="EJg-5U-fzf"/>
+                                            </connections>
+                                        </longPressGestureRecognizer>
+                                    </gestureRecognizers>
+                                </label>
+                                <label alignment="center" text="Label" id="ezF-BC-Wrg">
+                                    <gestureRecognizers>
+                                        <panGestureRecognizer id="hGv-P4-GQ2">
+                                            <connections>
+                                                <action selector="actionPanGesture:" destination="wiZ-ZG-ou0" id="0Ga-Cw-ZUj"/>
+                                            </connections>
+                                        </panGestureRecognizer>
+                                    </gestureRecognizers>
+                                </label>
+                            </items>
+                        </group>
+                        <label alignment="center" text="Label" id="M2V-tA-i9c">
+                            <gestureRecognizers>
+                                <swipeGestureRecognizer id="ocP-Aa-igb">
+                                    <connections>
+                                        <action selector="actionSwiperGesture:" destination="wiZ-ZG-ou0" id="yqf-aj-qCd"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                            </gestureRecognizers>
+                        </label>
+                        <dateLabel alignment="left" id="4Ra-W4-7pg">
+                            <dateFormatterStyle key="dateStyle" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" short="YES"/>
+                        </dateLabel>
+                        <timer alignment="left" id="yHy-pM-4iS"/>
+                        <map height="100" alignment="left" id="t3U-Zl-cM8"/>
+                        <movie width="1" height="100" alignment="left" id="sDF-Oz-M0I"/>
+                        <inlineMovie width="1" height="100" alignment="left" id="aKa-Mx-7go"/>
+                    </items>
+                    <connections>
+                        <outlet property="button" destination="HPp-UW-IRn" id="Kme-Va-zBy"/>
+                        <outlet property="date" destination="4Ra-W4-7pg" id="tvz-wP-8UE"/>
+                        <outlet property="group" destination="ST5-gw-sKs" id="Jf6-d2-HEo"/>
+                        <outlet property="image" destination="wRb-eE-gXy" id="Xsb-jH-RmO"/>
+                        <outlet property="inlineMovie" destination="aKa-Mx-7go" id="ETT-Un-gMB"/>
+                        <outlet property="label" destination="M2V-tA-i9c" id="pGb-ks-EH9"/>
+                        <outlet property="longPressGesture" destination="BEA-ob-hta" id="hAY-2N-KQr"/>
+                        <outlet property="map" destination="t3U-Zl-cM8" id="2GN-PL-eFI"/>
+                        <outlet property="movie" destination="sDF-Oz-M0I" id="w6m-kb-KFT"/>
+                        <outlet property="panGesture" destination="hGv-P4-GQ2" id="VDT-MS-Rd7"/>
+                        <outlet property="paymentButton" destination="h5H-rT-uHO" id="rz2-3E-CCe"/>
+                        <outlet property="picker" destination="rjn-zI-2W0" id="IEU-Ow-Ea2"/>
+                        <outlet property="separator" destination="fea-CL-X9w" id="Gfq-aS-xGr"/>
+                        <outlet property="slider" destination="yKX-LG-qr7" id="dcF-Zr-ayv"/>
+                        <outlet property="someSwitch" destination="PNY-g4-rtG" id="K4I-MB-Xta"/>
+                        <outlet property="swiperGesture" destination="ocP-Aa-igb" id="524-rx-KgL"/>
+                        <outlet property="tapGesture" destination="u1g-oY-VxI" id="QjE-A7-acr"/>
+                        <outlet property="timer" destination="yHy-pM-4iS" id="B2l-Bd-mPp"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="498" y="346"/>
+        </scene>
+    </scenes>
+</document>

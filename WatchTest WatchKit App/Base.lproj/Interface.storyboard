@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--back title-->
+        <scene sceneID="0rG-08-MlE">
+            <objects>
+                <controller title="back title" id="kz2-dZ-Yaj" customClass="PickerController" customModule="WatchTest_WatchKit_Extension">
+                    <items>
+                        <picker height="73" alignment="left" focusStyle="sequence" id="HYC-ay-rQ3">
+                            <connections>
+                                <action selector="actionPicker:" destination="kz2-dZ-Yaj" id="cqa-5U-ZWk"/>
+                            </connections>
+                        </picker>
+                        <picker height="74" alignment="left" style="stack" indicatorMode="shownWhileFocused" id="sWr-g8-gIY"/>
+                    </items>
+                    <connections>
+                        <outlet property="flagsPicker" destination="sWr-g8-gIY" id="DMF-3M-wTu"/>
+                        <outlet property="picker" destination="HYC-ay-rQ3" id="z6w-kw-Pcr"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-120" y="857"/>
+        </scene>
+        <!--PagedController-->
+        <scene sceneID="iqu-L5-qin">
+            <objects>
+                <controller identifier="PagedController" id="LJE-PS-Z0I" customClass="PagedController" customModule="WatchTest_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Label" id="l1C-zz-Odr">
+                            <fontDescription key="font" type="system" weight="thin" pointSize="35"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="label" destination="l1C-zz-Odr" id="Dxz-lZ-WKS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="809" y="473"/>
+        </scene>
+        <!--Start title-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Start title" id="AgC-eL-Hgc" customClass="MainController" customModule="WatchTest_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Test screen" id="C2h-Li-eAp">
+                            <connections>
+                                <segue destination="UTS-gK-jPy" kind="push" id="Ylo-AD-SSU"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Picker" id="UrP-V5-2hc">
+                            <connections>
+                                <segue destination="kz2-dZ-Yaj" kind="push" id="OTw-DT-GuN"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Presents" id="LR5-MN-ROs">
+                            <connections>
+                                <segue destination="faz-B8-Qpp" kind="push" id="lZM-du-lcB"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Image Animation" id="5VG-5o-wFV">
+                            <connections>
+                                <segue destination="hNL-Ol-Vvh" kind="push" id="HP1-TR-Ncp"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Connectivity" id="taD-0g-1IB">
+                            <connections>
+                                <segue destination="l8k-rV-2Ik" kind="push" id="Jhf-9E-rbp"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Countries" id="5B1-Ao-zoN">
+                            <connections>
+                                <segue destination="fNK-mo-3Xb" kind="push" id="XXg-SA-y2M"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Program pages" id="lF5-2c-SNc">
+                            <connections>
+                                <action selector="actionShowPages" destination="AgC-eL-Hgc" id="U6F-mV-H8q"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="IB pages" id="ufZ-aG-fQX">
+                            <connections>
+                                <segue destination="k8e-Gp-ClQ" kind="modal" id="O4X-r3-Hya"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="WKHapticType" id="OVT-Fw-rzr">
+                            <connections>
+                                <segue destination="wUT-bq-1v8" kind="push" id="wc8-Lf-LVO"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--TestController-->
+        <scene sceneID="fko-ZQ-S19">
+            <objects>
+                <controllerPlaceholder identifier="TestController" referencedIdentifier="TestController" id="UTS-gK-jPy"/>
+            </objects>
+            <point key="canvasLocation" x="552" y="296"/>
+        </scene>
+        <!--PresentsController-->
+        <scene sceneID="tfa-W8-uwr">
+            <objects>
+                <controller identifier="PresentsController" id="faz-B8-Qpp" customClass="PresentsController" customModule="WatchTest_WatchKit_Extension">
+                    <items>
+                        <button width="1" alignment="left" title="Alert" id="DVm-xD-BTn">
+                            <connections>
+                                <action selector="actionAlert" destination="faz-B8-Qpp" id="Pxo-Rh-ZzP"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="AlertSideBySide" id="mdR-dF-kaO">
+                            <connections>
+                                <action selector="actionAlertSideBySide" destination="faz-B8-Qpp" id="cXk-Iy-09j"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="ActionSheet" id="XIU-i1-nsv">
+                            <connections>
+                                <action selector="actionActionSheet" destination="faz-B8-Qpp" id="7iB-mk-Zh7"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="TextInput" id="wA9-Md-hZs">
+                            <connections>
+                                <action selector="actionTextInput" destination="faz-B8-Qpp" id="3Yv-jy-TCF"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="MediaPlayer" id="UGm-HV-gcC">
+                            <connections>
+                                <action selector="actionMediaPlayer" destination="faz-B8-Qpp" id="5b7-a0-oE9"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="AudioRecorder" id="5h1-vL-4Rg">
+                            <connections>
+                                <action selector="actionAudioRecorder" destination="faz-B8-Qpp" id="KXO-Ht-zsF"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="AddPasses" id="YA6-bO-GdH">
+                            <connections>
+                                <action selector="actionAddPasses" destination="faz-B8-Qpp" id="iqH-mS-KoX"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="mediaPlayerButton" destination="UGm-HV-gcC" id="601-Kc-5Ve"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="104" y="925"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="CAG-ES-ctz">
+            <objects>
+                <controller contentMode="topRight" id="hNL-Ol-Vvh">
+                    <items>
+                        <imageView width="66" height="66" alignment="center" verticalAlignment="center" image="Activity" id="zZE-y0-9GL"/>
+                        <imageView width="66" height="66" alignment="center" verticalAlignment="center" image="Activity" animationDuration="10" id="ugG-9o-v89"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="337" y="857"/>
+        </scene>
+        <!--ConnectivityController-->
+        <scene sceneID="GGR-c0-mg3">
+            <objects>
+                <controller identifier="ConnectivityController" id="l8k-rV-2Ik" customClass="ConnectivityController" customModule="WatchTest_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Label" id="PX0-Ce-WcL"/>
+                        <button width="1" alignment="left" title="Message" id="qq0-EW-lm6">
+                            <connections>
+                                <action selector="actionButton" destination="l8k-rV-2Ik" id="7Zw-0C-ZV2"/>
+                            </connections>
+                        </button>
+                        <table alignment="left" id="3r9-gP-OVU">
+                            <items>
+                                <tableRow identifier="CountryRow" id="L7X-xJ-dpA" customClass="CountryRow" customModule="WatchTest_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="SDX-NB-jAJ">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" id="66H-Az-nUa"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="66H-Az-nUa" id="02A-Li-CzA"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="someLabel" destination="PX0-Ce-WcL" id="SPZ-1r-Wlp"/>
+                        <outlet property="tableView" destination="3r9-gP-OVU" id="sC4-gL-LiA"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="561" y="857"/>
+        </scene>
+        <!--HapticController-->
+        <scene sceneID="sFH-N2-6Se">
+            <objects>
+                <controller identifier="HapticController" id="wUT-bq-1v8" customClass="HapticController" customModule="WatchTest_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="XFb-HT-E65">
+                            <items>
+                                <tableRow identifier="CountryRow" id="ACD-1z-yzf" customClass="CountryRow" customModule="WatchTest_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="nTC-5B-75t">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="label" id="RQu-Jg-85l">
+                                                <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="nameLabel" destination="RQu-Jg-85l" id="ZCt-bF-0qv"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="XFb-HT-E65" id="Nhy-Hw-IcZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="816" y="857"/>
+        </scene>
+        <!--InterfaceController-->
+        <scene sceneID="FV9-mV-uUw">
+            <objects>
+                <controllerPlaceholder referencedIdentifier="InterfaceController" id="fNK-mo-3Xb"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="336"/>
+        </scene>
+        <!--ibPages-->
+        <scene sceneID="IPn-qM-auL">
+            <objects>
+                <controllerPlaceholder identifier="ibPaged" referencedIdentifier="ibPages" id="Ni9-vP-4VB"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="54"/>
+        </scene>
+        <!--Done-->
+        <scene sceneID="41c-jR-sFA">
+            <objects>
+                <controller identifier="Not working from another storyboard" title="Done" alwaysBounce="YES" id="k8e-Gp-ClQ">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="!" id="hP3-I7-94E">
+                            <fontDescription key="font" type="system" weight="thin" pointSize="50"/>
+                        </label>
+                    </items>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <segue destination="ziP-z7-Qjm" kind="relationship" relationship="nextPage" id="9oT-uF-fdL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="809" y="176"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="k4P-Ky-VtP">
+            <objects>
+                <controller id="ziP-z7-Qjm">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="!!" id="zzh-aW-VmT">
+                            <fontDescription key="font" type="system" weight="thin" pointSize="50"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <segue destination="Ekg-1w-Hwa" kind="relationship" relationship="nextPage" id="tWA-hG-c4L"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1062" y="176"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Sm6-Ef-GGw">
+            <objects>
+                <controller id="Ekg-1w-Hwa">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="!!!" id="87e-4v-oNg">
+                            <fontDescription key="font" type="system" weight="thin" pointSize="50"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1317" y="176"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="1" green="0.92957753300000001" blue="0.1290167673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
