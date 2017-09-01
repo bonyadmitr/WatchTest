@@ -197,12 +197,12 @@
 		C452AE741F53DEC000EDD173 /* WatchTest WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				C4BEE4841F56812300B7BD70 /* WatchTest WatchKit App.entitlements */,
 				C452AE751F53DEC000EDD173 /* Interface.storyboard */,
 				C4C756741F57DB5D001D6836 /* IBPages.storyboard */,
 				C441B5381F55793600895641 /* Test.storyboard */,
 				C441B53B1F55796800895641 /* Notifications.storyboard */,
 				C4C756711F57DA1E001D6836 /* Countries.storyboard */,
+				C4BEE4841F56812300B7BD70 /* WatchTest WatchKit App.entitlements */,
 				C452AE781F53DEC000EDD173 /* Assets.xcassets */,
 				C452AE7A1F53DEC000EDD173 /* Info.plist */,
 			);
